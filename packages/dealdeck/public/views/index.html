@@ -1,0 +1,42 @@
+<!--Created by Pankaj Dewangan-->
+<div class="" data-ng-controller="DealdeckController">
+	<h1>Package: {{package.name}}</h1>
+
+    <!--Spades : {{spades}} <br>
+    Clubs : {{clubs}} <br>
+    Hearts : {{hearts}} <br>
+    Diamonds : {{diamonds}} <br>-->
+
+    <table border="4" class="table table-striped table-bordered table-condensed table-hover">
+        <tbody>
+            <tr>
+                <td ng-repeat="spade in spades">
+                    <!--{{ spade }}-->
+                    <img src="/dealdeck/assets/img/{{spade}}.png" width="80" height="100" />
+                </td>
+            </tr>
+            <tr>
+                <td ng-repeat="club in clubs">
+                    <!--{{ club }}-->
+                    <img src="/dealdeck/assets/img/{{club}}.png" width="80" height="100" />
+                </td>
+            </tr>
+            <tr>
+                <td ng-repeat="heart in hearts">
+                    <!--{{ heart }}-->
+                    <img src="/dealdeck/assets/img/{{heart}}.png" width="80" height="100" />
+                </td>
+            </tr>
+            <tr>
+                <td ng-repeat="diamond in diamonds">
+                    <!--{{ diamond }}-->
+                    <img src="/dealdeck/assets/img/{{diamond}}.png" width="80" height="100" />
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+Points : {{points}}<br>
+Percentage : {{percentage}}
+    <button data-ng-click="deal();">Deal Deck</button>
+</div>
