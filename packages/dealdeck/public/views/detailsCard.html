@@ -1,48 +1,50 @@
-
-<!--Detailed Card-->
 <!--Created by Pankaj Dewangan-->
 <div data-ng-controller="ListDealdeckController" data-ng-init="getOnedeal()">
-        <b>Points :</b> {{points}}<br>
+    <b>Points :</b> {{points}}<br>
     <b>Percentage :</b> {{percentage}} <table border="4" class="table table-striped table-bordered table-condensed table-hover">
-        <tbody>
-            <tr>
-                <td ng-repeat="spade in spades">
-                <!--
-                    <div style="background-color:{{spade.color}}">{{ spade.val }}</div>
-                -->
-                    <div style="background-color:{{spade.color}}; padding:10px;">
-                        <img src="/dealdeck/assets/img/{{spade.val}}.png" width="60" height="80" />
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td ng-repeat="club in clubs">
-                <!--
-                    <div style="background-color:{{club.color}}">{{ club.val }}</div>
-                 -->
-                    <div style="background-color:{{club.color}}; padding:10px;">
-                        <img src="/dealdeck/assets/img/{{club.val}}.png" width="60" height="80" />
-                    </div>
-                 </td>
-             </tr>
-             <tr>
-                 <td ng-repeat="heart in hearts">
-                     <!--<div style="background-color:{{heart.color}}">{{ heart.val }}</div> -->
-                     <div style="background-color:{{heart.color}}; padding:10px;">
-                      <img src="/dealdeck/assets/img/{{heart.val}}.png" width="60" height="80" />
-                     </div>
+    <tbody>
+    <tr>
+        <td><img src="/dealdeck/assets/img/spades.png" width="60" height="80" /></td>
+        <td ng-repeat="spade in spades">
+            <!--
+                <div style="background-color:{{spade.color}}">{{ spade.val }}</div>
+            -->
+            <div style="background-color:{{spade.color}}; padding:10px;">
+                <img src="/dealdeck/assets/img/{{spade.val}}.png" width="60" height="80" />
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td><img src="/dealdeck/assets/img/club.png" width="60" height="80" /></td>
+        <td ng-repeat="club in clubs">
+            <!--
+                <div style="background-color:{{club.color}}">{{ club.val }}</div>
+             -->
+            <div style="background-color:{{club.color}}; padding:10px;">
+                <img src="/dealdeck/assets/img/{{club.val}}.png" width="60" height="80" />
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td><img src="/dealdeck/assets/img/Heart.png" width="60" height="80" /></td>
+        <td ng-repeat="heart in hearts">
+            <!--<div style="background-color:{{heart.color}}">{{ heart.val }}</div> -->
+            <div style="background-color:{{heart.color}}; padding:10px;">
+                <img src="/dealdeck/assets/img/{{heart.val}}.png" width="60" height="80" />
+            </div>
 
-                  </td>
-              </tr>
-              <tr>
-                  <td ng-repeat="diamond in diamonds">
-                     <!--<div style="background-color:{{diamond.color}}"> {{ diamond.val }}</div>-->
-                      <div style="background-color:{{diamond.color}}; padding:10px;">
-                        <img src="/dealdeck/assets/img/{{diamond.val}}.png" width="60" height="80" />
-                      </div>
+        </td>
+    </tr>
+    <tr>
+        <td><img src="/dealdeck/assets/img/diamond.png" width="60" height="80" /></td>
+        <td ng-repeat="diamond in diamonds">
+            <!--<div style="background-color:{{diamond.color}}"> {{ diamond.val }}</div>-->
+            <div style="background-color:{{diamond.color}}; padding:10px;">
+                <img src="/dealdeck/assets/img/{{diamond.val}}.png" width="60" height="80" />
+            </div>
 
-                </td>
-            </tr>
-        </tbody>
-    </table>
+        </td>
+    </tr>
+    </tbody>
+</table>
 </div>

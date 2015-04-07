@@ -10,41 +10,42 @@ var mongoose = require('mongoose'),
 /**
  * Article Schema
  */
-var ArticleSchema = new Schema({
+var DealSchema = new Schema({
     created: {
         type: Date,
         default: Date.now
     },
-    title: {
+    card: {
+        type: Object,
+        default: '',
+        trim: true
+    },
+    points: {
         type: String,
         default: '',
         trim: true
     },
-    content: {
+    percentage: {
         type: String,
         default: '',
         trim: true
-    },
-    user: {
-        type: Schema.ObjectId,
-        ref: 'User'
     }
 });
 
 /**
  * Validations
  */
-ArticleSchema.path('title').validate(function(title) {
-    return title.length;
-}, 'Title cannot be blank');
+DealSchema.path('card').validate(function(card) {
+    return card.length;
+}, 'Card cannot be blank');
 
 /**
  * Statics
  */
-ArticleSchema.statics.load = function(id, cb) {
+DealSchema.statics.load = function(id, cb) {
     this.findOne({
         _id: id
     }).populate('user', 'name username').exec(cb);
 };
 
-mongoose.model('Article', ArticleSchema);
+mongoose.model('DealdeckModel', DealSchema);

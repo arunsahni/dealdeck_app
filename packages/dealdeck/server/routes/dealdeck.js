@@ -5,10 +5,23 @@ var dealdeck = require('../controllers/dealdeck');
 // The Package is past automatically as first parameter
 module.exports = function(Dealdeck, app, auth, database) {
 
-    app.get('/dealdeck/example/anyone', function(req, res, next) {
-        //console.log("route Server /dealdeck/example/anyone");
-        dealdeck.getDeal(req, res);
+    app.post('/dealdeck/example/savedeal', function(req, res, next) {
+        console.log("route Server /dealdeck/example/savedeal");
+        dealdeck.saveDeal(req, res);
     });
+
+    app.get('/dealdeck/example/listDeal', function(req, res, next) {
+        //console.log("route Server /dealdeck/example/listDeal");
+        dealdeck.listDeal(req, res);
+    });
+
+
+    app.post('/dealdeck/example/detailsDeal', function(req, res, next) {
+        console.log("route Server /dealdeck/example/detailsDeal"+req);
+        dealdeck.getOneDeal(req, res);
+    });
+
+
 
     app.get('/dealdeck/example/auth', auth.requiresLogin, function(req, res, next) {
         res.send('Only authenticated users can access this');

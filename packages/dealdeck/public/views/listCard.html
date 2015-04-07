@@ -1,5 +1,3 @@
-<!--listcard data-->
-
 <!--Created by Pankaj Dewangan-->
 <div data-ng-controller="ListDealdeckController">
     <b>Total records  : {{cards.length}} </b>
@@ -8,7 +6,7 @@
 		<th>Points</th>
 		<th>Percentage</th>
 		<tr ng-repeat="card in cards">
-			<td><a data-ng-click="getOnedeal(card._id);">{{card.created}}
+			<td><a data-ng-click="getOnedeal(card._id);">{{card.created | date:'MM/dd/yyyy :MM:ss'}}
                 <a class="btn" href="/#!/dealdeck/{{card._id}}">
                     <i class="glyphicon glyphicon-edit"></i>
                 </a>
