@@ -1,10 +1,17 @@
 Setup : 
 
-git clone https://github.com/PankajMean/Dealdeck.git
+Go to your directory where you wnat to clone the application, and then use the following commands : 
 
-npm install
+1. git clone https://github.com/PankajMean/Dealdeck.git
 
-bower install
+2. npm install
+
+3. bower install
+
+4. node server.js
+
+5. Go to browser and type localhost:3000
+
 
 ---------------
 My Assignment : 
