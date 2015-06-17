@@ -26,8 +26,9 @@ exports.article = function(req, res, next, id) {
 exports.create = function(req, res) {
     var article = new Article(req.body);
     article.user = req.user;
-
+    //console.log('create article');
     article.save(function(err) {
+        //console.log('save article');
         if (err) {
             return res.send('users/signup', {
                 errors: err.errors,

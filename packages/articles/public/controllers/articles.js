@@ -10,6 +10,7 @@ angular.module('mean').controller('ArticlesController', ['$scope', '$stateParams
         };
 
         $scope.create = function() {
+
             var article = new Articles({
                 title: this.title,
                 content: this.content

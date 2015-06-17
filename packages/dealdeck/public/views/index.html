@@ -1,0 +1,54 @@
+<!--Created by Pankaj Dewangan-->
+<div class="" data-ng-controller="DealdeckController"><h1>Package: {{package.name}}</h1>
+
+    <!--Spades : {{spades}} <br>
+    Clubs : {{clubs}} <br>
+    Hearts : {{hearts}} <br>
+    Diamonds : {{diamonds}} <br>-->
+    <button data-ng-click="deal();" class="btn btn-info">Deal Deck</button><br>
+    <b>Points :</b> {{points}}<br>
+    <b>Percentage :</b> {{percentage}} <table border="4" class="table table-striped table-bordered table-condensed table-hover">
+        <tbody>
+            <tr>
+                <td ng-repeat="spade in spades">
+                <!--
+                    <div style="background-color:{{spade.color}}">{{ spade.val }}</div>
+                -->
+                    <div style="background-color:{{spade.color}}; padding:10px;">
+                        <img src="/dealdeck/assets/img/{{spade.val}}.png" width="60" height="80" />
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td ng-repeat="club in clubs">
+                <!--
+                    <div style="background-color:{{club.color}}">{{ club.val }}</div>
+                 -->
+                    <div style="background-color:{{club.color}}; padding:10px;">
+                        <img src="/dealdeck/assets/img/{{club.val}}.png" width="60" height="80" />
+                    </div>
+                 </td>
+             </tr>
+             <tr>
+                 <td ng-repeat="heart in hearts">
+                     <!--<div style="background-color:{{heart.color}}">{{ heart.val }}</div> -->
+                     <div style="background-color:{{heart.color}}; padding:10px;">
+                      <img src="/dealdeck/assets/img/{{heart.val}}.png" width="60" height="80" />
+                     </div>
+
+                  </td>
+              </tr>
+              <tr>
+                  <td ng-repeat="diamond in diamonds">
+                     <!--<div style="background-color:{{diamond.color}}"> {{ diamond.val }}</div>-->
+                      <div style="background-color:{{diamond.color}}; padding:10px;">
+                        <img src="/dealdeck/assets/img/{{diamond.val}}.png" width="60" height="80" />
+                      </div>
+
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+</div>
